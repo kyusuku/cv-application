@@ -3,7 +3,7 @@ import Input from "./Input.tsx";
 export default function Experience({
   formData,
   onInputChange,
-  index
+  index,
 }: {
   formData: { [key: string]: string };
   onInputChange: (field: string, value: string) => void;
@@ -29,13 +29,17 @@ export default function Experience({
         label="Duration of Work"
         type="text"
         value={formData[`durationOfWork${prefix}`]}
-        onChange={(e) => onInputChange(`durationOfWork${prefix}`, e.target.value)}
+        onChange={(e) =>
+          onInputChange(`durationOfWork${prefix}`, e.target.value)
+        }
       />
       <Input
         label="Description"
         type="text"
         value={formData[`experienceDescription${prefix}`]}
-        onChange={(e) => onInputChange(`experienceDescription${prefix}`, e.target.value)}
+        onChange={(e) =>
+          onInputChange(`experienceDescription${prefix}`, e.target.value)
+        }
       />
     </div>
   );
