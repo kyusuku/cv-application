@@ -1,39 +1,41 @@
-import Title from "./Title.tsx";
 import Input from "./Input.tsx";
 
 export default function Experience({
   formData,
   onInputChange,
+  index
 }: {
   formData: { [key: string]: string };
   onInputChange: (field: string, value: string) => void;
+  index: number;
 }) {
+  const prefix = index === 1 ? "" : `${index}`;
+
   return (
     <div>
-      <Title name="Experience" />
       <Input
         label="Company"
         type="text"
-        value={formData.company}
-        onChange={(e) => onInputChange("company", e.target.value)}
+        value={formData[`company${prefix}`]}
+        onChange={(e) => onInputChange(`company${prefix}`, e.target.value)}
       />
       <Input
         label="Position"
         type="text"
-        value={formData.position}
-        onChange={(e) => onInputChange("position", e.target.value)}
+        value={formData[`position${prefix}`]}
+        onChange={(e) => onInputChange(`position${prefix}`, e.target.value)}
       />
       <Input
         label="Duration of Work"
         type="text"
-        value={formData.durationOfWork}
-        onChange={(e) => onInputChange("durationOfWork", e.target.value)}
+        value={formData[`durationOfWork${prefix}`]}
+        onChange={(e) => onInputChange(`durationOfWork${prefix}`, e.target.value)}
       />
       <Input
         label="Description"
         type="text"
-        value={formData.experienceDescription}
-        onChange={(e) => onInputChange("experienceDescription", e.target.value)}
+        value={formData[`experienceDescription${prefix}`]}
+        onChange={(e) => onInputChange(`experienceDescription${prefix}`, e.target.value)}
       />
     </div>
   );

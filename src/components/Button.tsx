@@ -1,10 +1,27 @@
-export default function Button({ text }: { text: string }) {
+import { useState } from 'react';
+
+export default function Button({ 
+  text,
+  onButtonClick
+}: { 
+  text: string 
+  onButtonClick: () => void
+}) {
+  const [isHovered, setIsHovered] = useState(false);
+  const styleWidth = text === 'Add Education' ? '125px' : '130px';
+
   return (
     <button
       type="button"
-      className="my-3 flex items-center justify-center border-2 border-black px-2 hover:cursor-pointer hover:bg-gray-300"
+      className="mt-3 flex items-center justify-start border-2 border-black px-2 py-1 hover:cursor-pointer rounded-sm transition-[width] duration-300 ease-in-out h-8 overflow-hidden whitespace-nowrap active:bg-gray-300"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      onClick={onButtonClick}
+      style={{
+        width: isHovered ? styleWidth : '50px',
+      }}
     >
-      {text}
+      {isHovered ? text : 'Add'}
     </button>
   );
 }
