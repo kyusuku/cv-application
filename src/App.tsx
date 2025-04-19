@@ -47,7 +47,7 @@ function App() {
       <section className="flex-1/2 border-r-2 border-gray-300 p-8">
         <Intro formData={formData} onInputChange={handleInputChange} />
       </section>
-      <section className="flex flex-1/2 justify-center border-l-2 border-gray-300 p-8">
+      <section className="flex flex-1/2 justify-center border-l-2 border-gray-300 p-8 bg-gray-700">
         <Result formData={formData} />
       </section>
     </div>
