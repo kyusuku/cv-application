@@ -27,7 +27,7 @@ export default function Input({
       {label}
       {label === "Description" ? (
         <textarea
-          className={`border-1 border-black px-2 py-0.5 ${fieldHeight} ${isFilled} hover:border-teal-700 focus:border-teal-800 focus:ring-0 focus:outline-none rounded-md`}
+          className={`border-1 border-black px-2 py-0.5 ${fieldHeight} ${isFilled} rounded-md hover:border-teal-700 focus:border-teal-800 focus:ring-0 focus:outline-none`}
           rows={3}
           value={value}
           onChange={onChange}
@@ -35,7 +35,7 @@ export default function Input({
       ) : (
         <input
           type={type}
-          className={`border-1 border-black px-2 py-0.5 hover:border-teal-700 focus:border-teal-800 focus:ring-0 focus:outline-none rounded-md ${isFilled}`}
+          className={`rounded-md border-1 border-black px-2 py-0.5 hover:border-teal-700 focus:border-teal-800 focus:ring-0 focus:outline-none ${isFilled}`}
           value={value}
           onChange={onChange}
         ></input>

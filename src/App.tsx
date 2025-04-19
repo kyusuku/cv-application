@@ -45,23 +45,28 @@ function App() {
   };
 
   return (
-    <div className="flex min-h-dvh min-w-dvw justify-center max-tablet:flex-col">
-      <div className="flex-1 overflow-y-scroll h-dvh" id="leftSection">
+    <div className="max-tablet:flex-col flex min-h-dvh min-w-dvw justify-center">
+      <div className="h-dvh flex-1 overflow-y-scroll" id="leftSection">
         <section className="p-8 max-sm:p-4">
           <Intro formData={formData} onInputChange={handleInputChange} />
         </section>
       </div>
-      <div className="flex-1 bg-gray-700 flex items-center justify-center h-dvh">
-        <section className="flex flex-col items-center justify-center w-full h-full p-8 gap-4 max-sm:p-4" id="printSection">
-          <Result formData={formData}/>
+      <div className="flex h-dvh flex-1 items-center justify-center bg-gray-700">
+        <section
+          className="flex h-full w-full flex-col items-center justify-center gap-4 p-8 max-sm:p-4"
+          id="printSection"
+        >
+          <Result formData={formData} />
           <button
-                  type="button"
-                  className="rounded-sm bg-blue-500 px-4 py-2 hover:cursor-pointer hover:bg-blue-600 text-white flex flex-row gap-2 items-center justify-center font-bold"
-                  onClick={() => window.print()}
-                >
-                  Download
-                  <span><Icon path={mdiDownload} size={1} /></span>
-                </button>
+            type="button"
+            className="flex flex-row items-center justify-center gap-2 rounded-sm bg-blue-500 px-4 py-2 font-bold text-white hover:cursor-pointer hover:bg-blue-600"
+            onClick={() => window.print()}
+          >
+            Download
+            <span>
+              <Icon path={mdiDownload} size={1} />
+            </span>
+          </button>
         </section>
       </div>
     </div>

@@ -28,7 +28,7 @@ export default function Intro({
   };
 
   return (
-    <div className="h-full bg-white p-8 text-black shadow-2xl rounded-lg max-sm:p-4">
+    <div className="h-full rounded-lg bg-white p-8 text-black shadow-2xl max-sm:p-4">
       <Title name="Personal Information" />
       <Input
         label="Full Name"

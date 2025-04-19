@@ -68,19 +68,19 @@ body {
   }
 
   #printSection {
-    flex: none; 
-    height: 297mm; 
-    width: 210mm; 
-    margin: 0 auto; 
-    padding: 0; 
-    box-shadow: none; 
-    display: block; 
+    flex: none;
+    height: 297mm;
+    width: 210mm;
+    margin: 0 auto;
+    padding: 0;
+    box-shadow: none;
+    display: block;
   }
 
   body {
-    background: none; 
-    margin: 0; 
-    display: block; 
+    background: none;
+    margin: 0;
+    display: block;
   }
 
   button {
